@@ -1,0 +1,25 @@
+*{
+    border: 1px solid lightcoral;
+    margin: 3px;
+}
+
+#divCores{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 30%;
+    flex-wrap: wrap;
+}
+
+.divCor{
+    border: 2px solid black;
+}
+
+#divContainer{
+    display: flex;
+}
+
+#divResultado{
+    border: 1px solid black;
+}
