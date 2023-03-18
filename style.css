@@ -1,12 +1,20 @@
-*{
+/* *{
     border: 1px solid lightcoral;
     margin: 3px;
+} */
+
+body{
+    /* background-color: #1d1d1d; */
+    background-color: #212121;
+    color: #e0e0e0;
+    font-family: monospace;
 }
 
 #divCores{
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    flex-direction: row;
+    /* justify-content: flex-start; */
+    justify-content: center;
     align-items: center;
     height: 30%;
     flex-wrap: wrap;
@@ -14,12 +22,54 @@
 
 .divCor{
     border: 2px solid black;
+    padding: 2px;
+    margin: 1px;
+    border-radius: 7px;
+    font-size: small;
 }
 
 #divContainer{
     display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: space-around;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
 }
 
-#divResultado{
+span{
+    font-size: 45px;
+}
+
+.divResultado{
     border: 1px solid black;
+    height: 50px;
+    width: 60px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    align-self: flex-end;
+    text-align: center;
+}
+#divAlarmes{
+    display: flex;
+    flex-direction: row;
+}
+
+#divCorCompleta, #divFechou5{
+    /* display: invisible; */
+    visibility: hidden
+}
+input{
+    height: 50px;
+    width: 60px;
+    border-radius: 5px;
+    border: 0px solid lightgray;
+    text-align: center;
+    font-size: xx-large;
+    background-color: lightgray;
 }

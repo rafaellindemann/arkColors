@@ -1,0 +1,11 @@
+
+
+- gatilho de cor nova (?)
+- gatilho de cor completa
+- gatilho de 5
+- listar cores completas
+- salvar dados
+- carregar dados
+- divAlarmes obedecer coresEscuras
+- ctrl+z
+

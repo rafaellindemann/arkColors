@@ -1,5 +1,6 @@
 let hexCores = [] // vetor com o hex de cada cor
 let nomesCores = []
+let coresEscuras = [1,2,9,13,14,15,16,17,20,22,27,29,31,34,35,41,42,43,44,52,54,56,57,58,60,61,62,63,65,69,70,71,72,73,79,80,81,82,85,86,87,90,92,93,97,98,201,202,203,205,207,211,212,213,217,221,223,224,226]
 
 function criarVetorNomesCor(){
     nomesCores.push(" ")
@@ -227,7 +228,7 @@ function criarVetorHexCores(){
     hexCores.push("#0f552e")
     hexCores.push("#005b45")
     hexCores.push("#5b9725")
-    hexCores.push("#5b9725")
+    hexCores.push("#5b9725") // *** arrumar o hex, 89 darklavender
     hexCores.push("#853587")
     hexCores.push("#bd77be")
     hexCores.push("#0e404a")

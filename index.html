@@ -9,13 +9,20 @@
 </head>
 <body>
     <div id="divContainer">
-        cor <input type="text" id="inpCor">
-        região <input type="text" id="inpReg">
+        <div>
+            <span>[</span><input type="text" id="inpCor"><span>:</span>
+            <input type="text" id="inpReg"><span>]</span>
+        </div>
+        <div id="divAlarmes">
+            <div id="divResultado" class="divResultado"></div>
+            <div id="divCorCompleta" class="divResultado">Cor completa</div>
+            <div id="divFechou5" class="divResultado">Fechou 5</div>
+        </div>
         
-        <div id="divResultado"></div>
     </div>
 
     <div id="divCores"></div>
+    <div id="divCoresCompletas">Lista de cores completas: </div>
     
     <div id="divTeste"></div>
 
