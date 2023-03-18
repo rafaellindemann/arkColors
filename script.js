@@ -6,7 +6,7 @@ let cores = []
 function criarVetorPrincipal(){
     for(i=0; i<=227; i++){
         let cor = {
-            regioes : [0,3,5,0,0,0],
+            regioes : [0,0,0,0,0,0],
             completa : 0
         }
         cores.push(cor)
@@ -93,6 +93,19 @@ function  inserirCor(){
     //*** /teste
     document.getElementById('inpCor').value = ''
     document.getElementById('inpReg').value = ''
+}
+
+function exportar(){
+    let dados = JSON.stringify(cores)
+    // document.getElementById('txtDados').innerText = dados
+    document.getElementById('txtDados').value = dados
+    navigator.clipboard.writeText(dados)
+    alert("Dados copiados para a área de transferência")
+}
+
+function importar(){
+    cores = JSON.parse(document.getElementById('txtDados').value)
+    atualizarCores()
 }
 
 

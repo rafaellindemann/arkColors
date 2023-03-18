@@ -64,6 +64,11 @@ span{
     /* display: invisible; */
     visibility: hidden
 }
+#txtDados, button{
+    background-color: #616161;
+    border-radius: 15px;
+    overflow: hidden;
+}
 input{
     height: 50px;
     width: 60px;
