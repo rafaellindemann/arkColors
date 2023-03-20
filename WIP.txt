@@ -1,13 +1,19 @@
 
-
-- gatilho de cor nova (?)
-- gatilho de cor completa
-- gatilho de 5
-- listar cores completas
+- validação dos dados / feito
+- gatilho de cor nova (?) / feito
+- gatilho de cor completa / feito
+- gatilho de 5 / feito
+- listar cores completas / feito
+- mostar fechou todos / feito
 - salvar dados
 - carregar dados
 - divAlarmes obedecer coresEscuras
 - ctrl+z
+- local storage (data do ultimo save)
+- coresEscuras na divContainer
+- 
+
+
 - free json storage (https://www.google.com/search?q=free+json+storage&sxsrf=AJOqlzUtWyYenAKcVbk0igznd4Io3ROI1A%3A1679104353437&ei=YRkVZI-pGpXF5OUP7raEsAw&oq=free+json+s&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAxgBMggIABCABBDLATIICAAQgAQQywEyCAgAEIAEEMsBMggIABCABBDLATIICAAQgAQQywEyCAgAEIAEEMsBMggIABCABBDLATIICAAQgAQQywEyCAgAEIAEEMsBMggIABCABBDLAToKCAAQRxDWBBCwAzoHCAAQsAMQQzoNCAAQ5AIQ1gQQsAMYAToMCC4QyAMQsAMQQxgCOhIILhDHARDRAxDIAxCwAxBDGAI6BAgjECc6CgguEMcBENEDEEM6BAgAEEM6EAguELEDEIMBEMcBENEDEEM6EQguEIAEELEDEIMBEMcBENEDOgoIABCxAxCDARBDOgsIABCABBCxAxCDAToLCC4Q1AIQsQMQgAQ6DgguEIAEELEDEIMBENQCOg4ILhCDARDUAhCxAxCABDoFCAAQgAQ6CwguEIAEEMcBEK8BSgQIQRgAUOo0WMhPYLFhaANwAXgAgAGEAYgBrAqSAQQwLjExmAEAoAEByAETwAEB2gEGCAEQARgJ2gEGCAIQARgI&sclient=gws-wiz-serp)
     -- https://extendsclass.com/json-storage.html
     -- https://www.youtube.com/results?search_query=free+json+storage

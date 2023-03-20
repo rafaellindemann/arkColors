@@ -60,9 +60,11 @@ span{
     flex-direction: row;
 }
 
-#divCorCompleta, #divFechou5{
+#divCorCompleta, #divFechou5, #divFechouTodos{
     /* display: invisible; */
-    visibility: hidden
+    visibility: hidden;
+    background-color: blue;
+    width:auto;
 }
 #txtDados, button{
     background-color: #616161;
@@ -77,4 +79,7 @@ input{
     text-align: center;
     font-size: xx-large;
     background-color: lightgray;
+}
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
 }

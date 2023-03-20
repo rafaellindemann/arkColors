@@ -1,8 +1,6 @@
 
 let cores = []
 
-
-
 function criarVetorPrincipal(){
     for(i=0; i<=227; i++){
         let cor = {
@@ -49,7 +47,15 @@ document.getElementById('inpReg').addEventListener('keyup', enterReg)
 
 function enterCor(e){
     if(e.key == 'Enter'){
-        document.getElementById('inpReg').focus()
+        let corLida = Number(document.getElementById('inpCor').value)
+        if((corLida>=0 && corLida<=100) || (corLida>=201 && corLida<=227)){
+            document.getElementById('inpReg').focus()
+        }else {
+            alert(corLida + " é um valor de ID incorreto para 'Cor'")
+            document.getElementById('inpCor').value = ''
+        }
+        let regLida = Number(document.getElementById('inpReg').value)
+
     }
 }
 
@@ -61,18 +67,27 @@ function enterReg(e){
 }
 
 function  inserirCor(){
+    document.getElementById('divCorCompleta').style.visibility = 'hidden'
+    document.getElementById('divFechou5').style.visibility = 'hidden'
+    document.getElementById('divFechouTodos').style.visibility = 'hidden'
     let corLida = Number(document.getElementById('inpCor').value)
     let regLida = Number(document.getElementById('inpReg').value)
+    
+    
+    if((regLida>=0 && regLida<=5)){
     
     console.log(corLida);
     if(cores[corLida].regioes[regLida] == 0){
         document.getElementById('divResultado').style.background = "green"
         cores[corLida].regioes[regLida] = cores[corLida].regioes[regLida] + 1
         console.log(cores[corLida].regioes);
+        document.getElementById('divCorCompleta').style.visibility = 'visible'
     }else{
         if(cores[corLida].regioes[regLida] < 5){
             document.getElementById('divResultado').style.background = "yellow"
-            cores[corLida].regioes[regLida]++
+            cores[corLida].regioes[regLida]++            
+        if(cores[corLida].regioes[regLida] == 5){document.getElementById('divFechou5').style.visibility = 'visible'}
+        if(fechouTodos(corLida)){document.getElementById('divFechouTodos').style.visibility = 'visible'}
         }else{
             document.getElementById('divResultado').style.background = "red"
         }
@@ -88,11 +103,19 @@ function  inserirCor(){
     
     document.getElementById('divResultado').innerHTML = `<div>[${document.getElementById('inpCor').value}:${document.getElementById('inpReg').value}]</div>
     <div>Q:${cores[corLida].regioes[regLida]}</div>`
-
-
+    
+    
     //*** /teste
     document.getElementById('inpCor').value = ''
     document.getElementById('inpReg').value = ''
+    if(!cores[corLida].regioes.includes(0)){
+        // alert("ola")
+
+    }
+}else {
+    alert(regLida + " é um valor de ID incorreto para 'Região'")
+        document.getElementById('inpReg').value = ''
+    }
 }
 
 function exportar(){
@@ -107,6 +130,17 @@ function importar(){
     cores = JSON.parse(document.getElementById('txtDados').value)
     atualizarCores()
 }
+
+function fechouTodos(cor){
+    for(i=0; i<=5; i++){
+        if(cores[cor].regioes[i] != 5){
+            return false
+        }
+    }
+    return true
+}
+
+
 
 
 criarVetorHexCores()
