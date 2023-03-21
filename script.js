@@ -44,6 +44,7 @@ function criarTabelaDeCores(){
 
 document.getElementById('inpCor').addEventListener('keyup', enterCor)
 document.getElementById('inpReg').addEventListener('keyup', enterReg)
+document.getElementById('inpReg').addEventListener('keydown', ctrlZ)
 
 function enterCor(e){
     if(e.key == 'Enter'){
@@ -66,6 +67,19 @@ function enterReg(e){
     }
 }
 
+function ctrlZ(e){
+    if (e.ctrlKey && e.key === 'z'){
+        apagarUltimo
+    }
+}
+
+function apagarUltimo(){
+    if(document.getElementById('divResultado').style.background = "green"){
+        cores[corLida].regioes[regLida] = cores[corLida].regioes[regLida] - 1
+        console.log(cores[corLida].regioes);
+    }
+}
+
 function  inserirCor(){
     document.getElementById('divCorCompleta').style.visibility = 'hidden'
     document.getElementById('divFechou5').style.visibility = 'hidden'
@@ -81,7 +95,7 @@ function  inserirCor(){
         document.getElementById('divResultado').style.background = "green"
         cores[corLida].regioes[regLida] = cores[corLida].regioes[regLida] + 1
         console.log(cores[corLida].regioes);
-        document.getElementById('divCorCompleta').style.visibility = 'visible'
+        // document.getElementById('divCorCompleta').style.visibility = 'visible'
     }else{
         if(cores[corLida].regioes[regLida] < 5){
             document.getElementById('divResultado').style.background = "yellow"
@@ -92,6 +106,7 @@ function  inserirCor(){
             document.getElementById('divResultado').style.background = "red"
         }
     }
+
     atualizarCores()
     document.getElementById('divContainer').style.background = hexCores[corLida]
     

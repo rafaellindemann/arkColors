@@ -5,13 +5,13 @@
 - gatilho de 5 / feito
 - listar cores completas / feito
 - mostar fechou todos / feito
+- ctrl+z
+- vetor de dinossauros
 - salvar dados
 - carregar dados
 - divAlarmes obedecer coresEscuras
-- ctrl+z
 - local storage (data do ultimo save)
 - coresEscuras na divContainer
-- vetor de dinossauros
 
 
 
