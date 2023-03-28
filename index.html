@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,11 @@
     <link rel="stylesheet" href="style.css">
     <title>Cores Ark 3k</title>
 </head>
+
 <body>
     <div id="divContainer">
         <div>
-            <span>[</span><input type="number" id="inpCor" ><span>:</span>
+            <span>[</span><input type="number" id="inpCor"><span>:</span>
             <input type="number" id="inpReg"><span>]</span>
         </div>
         <div id="divAlarmes">
@@ -19,22 +21,25 @@
             <div id="divFechou5" class="divResultado">Fechou 5</div>
             <div id="divFechouTodos" class="divResultado">Fechou todos</div>
         </div>
-        
+
     </div>
 
     <div id="divCores"></div>
+    <!-- <div>Dino: <input type="text" id="divCriarDino" placeholder="adicione um dino"></div> -->
     <div id="divCoresCompletas">Lista de cores completas: </div>
     <div id="divDados">
         <button onclick="importar()">Importar</button>
         <button onclick="exportar()">Exportar</button>
+        
         <div>
             <textarea name="" id="txtDados" cols="80" rows="20"></textarea>
         </div>
     </div>
-    
+
     <div id="divTeste"></div>
 
     <script src="start.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>

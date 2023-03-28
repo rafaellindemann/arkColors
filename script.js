@@ -1,11 +1,24 @@
 
 let cores = []
 let ctrlZ = []
+// let dinossauro = []
+
+// function cadastrar(){
+//     var dino = {
+//         nome: ""
+//     }
+//     dino.nome = document.getElementById("divCriarDino").value
+
+
+//     fila.push(dino)
+//     mostrar()
+    
+// }
 
 function criarVetorPrincipal() {
     for (i = 0; i <= 227; i++) {
         let cor = {
-            regioes: [0, 0, 0, 0, 0, 0],
+            regioes: [1, 1, 1, 1, 1, 0],
             completa: false
         }
         cores.push(cor)
@@ -25,18 +38,17 @@ function atualizarCores() {
     }
     atualizarCoresCompletas()
 }
+divCores = document.getElementById("divCores")
 
-function atualizarCoresCompletas(){
+function atualizarCoresCompletas() {
     let coresCompletas = []
-    for(i=1; i < cores.length ; i++){
-        if(cores[i].completa == true){
+    for (i = 1; i < cores.length; i++) {
+        if (cores[i].completa == true) {
             coresCompletas.push(i)
         }
     }
-    document.getElementById('divCoresCompletas').innerHTML = "Lista de cores completas: " + coresCompletas  
+    document.getElementById('divCoresCompletas').innerHTML = "Lista de cores completas: " + coresCompletas
 }
-
-divCores = document.getElementById("divCores")
 
 function criarTabelaDeCores() {
     for (i = 1; i <= 227; i++) {
@@ -65,7 +77,7 @@ function enterCor(e) {
         if ((corLida >= 0 && corLida <= 100) || (corLida >= 201 && corLida <= 227)) {
             document.getElementById('inpReg').focus()
         } else {
-            alert(corLida + " é um valor de ID incorreto para 'Cor'")
+            alert(corLida + " É um valor de ID incorreto para 'Cor'")
             document.getElementById('inpCor').value = ''
         }
         let regLida = Number(document.getElementById('inpReg').value)
@@ -96,7 +108,7 @@ function desfazer(e) {
                     document.getElementById('divContainer').style.background = "#212121"
                     document.getElementById('divCorCompleta').style.visibility = "hidden"
                 } else {
-                    alert("nada feito")
+                    alert("Nada feito")
                     ctrlZ = []
                     document.getElementById('divResultado').style.background = "#212121"
                     document.getElementById('divResultado').innerHTML = ""
@@ -106,8 +118,6 @@ function desfazer(e) {
         }
     }
 }
-
-
 
 function inserirCor() {
     document.getElementById('divCorCompleta').style.visibility = 'hidden'
@@ -193,7 +203,7 @@ function inserirCor() {
 
             }
         } else {
-            alert(regLida + " é um valor de ID incorreto para 'Região'")
+            alert(regLida + " É um valor de ID incorreto para 'Região'")
             document.getElementById('inpReg').value = ''
         }
     }
@@ -209,7 +219,9 @@ function exportar() {
 
 function importar() {
     cores = JSON.parse(document.getElementById('txtDados').value)
+    alert("Tabela de cores atualizada")
     atualizarCores()
+    document.getElementById('txtDados').value = ""
 }
 
 function fechouTodos(cor) {
