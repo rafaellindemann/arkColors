@@ -7,11 +7,14 @@
 - mostar fechou todos / feito
 - ctrl+z
 - vetor de dinossauros
-- salvar dados
-- carregar dados
+- salvar dados - retirar text area
+- carregar dados - importar mostra textarea e botao carregar
 - divAlarmes obedecer coresEscuras
 - local storage (data do ultimo save)
 - coresEscuras na divContainer
+- edição manual da quantidade de uma [cor:regiao]
+- salvar dados do usuário em cloud (usuário e senha, salvando em json backendless; ou auth e google drive/dropbox)
+- translate
 
 
 
