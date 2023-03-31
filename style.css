@@ -83,3 +83,91 @@ input{
 input[type=number]::-webkit-inner-spin-button { 
     -webkit-appearance: none;
 }
+
+.navigation{
+    font-size: 22px;
+    position: absolute;
+    height: 65px;
+    background: rgb(126, 126, 126);
+    width: 65px;
+    /* box-shadow: 10px 0 0 #a7a7a7; */
+    text-decoration: none;
+    /* border-left: 10px solid #FFF; */
+    overflow-x: hidden;
+    overflow-y: hidden;
+    transition: 0.5s;
+    border-radius: 5%;
+    z-index: 10;
+}
+img{
+    margin-top: 4px;
+    margin-left: 15px;
+}
+/* #inpAdicionarDinos{
+    height: 30px;
+    width: 60px;
+} */
+
+.navigation:hover{
+    width:200px;
+    height: 380px;
+    border-radius: 5%;
+}
+
+.navigation ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 5px;
+    padding-top: 20px;
+    text-decoration: none;
+    margin-top: 50px;
+}
+
+.navigation ul li{
+    position: relative;
+    list-style: none;
+    width: 100%;
+    margin-top: 5px;
+    /* border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px; */
+}
+
+/* .navigation ul li a{
+    position: relative;
+    display: flex;
+    width: 100%;
+    text-decoration: none;
+    color: #fff;
+} */
+
+/* .navigation ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 70px;
+}
+
+.navigation ul li a .icon ion-icon{
+    position: relative;
+    font-size: 1.5rem;
+    z-index: 1;
+}
+
+.navigation ul li a .title{
+    position: relative;
+    display: block;
+    padding-left: 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+} */
+
+/* .navigation ul li.active{
+    background: #a7a7a7 ;
+} */

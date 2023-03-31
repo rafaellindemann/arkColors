@@ -10,12 +10,35 @@
 </head>
 
 <body>
+    <div class="navigation">
+        <img src="images&icons/gears_transparent.gif" alt="">
+        <ul>
+            <li class="list active">
+                <a href=""><button onclick="importar()">Importar</button></a>
+            </li>
+
+            <li class="list">
+                <button onclick="exportar()">Exportar</button>
+            </li>
+
+            <li class="list">
+                <button onclick="adicionarDino()">Adicionar Dinos</button>
+                <!-- add dinos: <input type="text" name="adicionarDinos" id="inpAdicionarDinos"> -->
+            </li>
+        </ul>
+    </div>
     <div id="divContainer">
         <div>
             <span>[</span><input type="number" id="inpCor"><span>:</span>
             <input type="number" id="inpReg"><span>]</span>
         </div>
         <div id="divAlarmes">
+            <div id="divSelecionarDino" onchange="selecionarDino()">
+                <select name="selectDinos" id="selectDinos">
+                    <option value="--">--</option>
+                </select>
+            </div>
+
             <div id="divResultado" class="divResultado"></div>
             <div id="divCorCompleta" class="divResultado">Cor completa</div>
             <div id="divFechou5" class="divResultado">Fechou 5</div>
@@ -28,15 +51,17 @@
     <!-- <div>Dino: <input type="text" id="divCriarDino" placeholder="adicione um dino"></div> -->
     <div id="divCoresCompletas">Lista de cores completas: </div>
     <div id="divDados">
-        <button onclick="importar()">Importar</button>
-        <button onclick="exportar()">Exportar</button>
-        
+        <!-- <button onclick="importar()">Importar</button> -->
+        <!-- <button onclick="exportar()">Exportar</button> -->
+
         <div>
             <textarea name="" id="txtDados" cols="80" rows="20"></textarea>
         </div>
     </div>
 
     <div id="divTeste"></div>
+
+
 
     <script src="start.js"></script>
     <script src="script.js"></script>
