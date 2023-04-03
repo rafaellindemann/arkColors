@@ -9,13 +9,16 @@
 - vetor de dinossauros / feito
 - salvar dados - retirar text area / quase
 - carregar dados - importar mostra textarea e botao carregar / quase
+
 - divAlarmes obedecer coresEscuras 
+
 - local storage (data do ultimo save)
 - coresEscuras na divContainer
 - edição manual da quantidade de uma [cor:regiao]
 - translate
 
 - salvar dados do usuário em cloud (usuário e senha, salvando em json backendless; ou auth e google drive/dropbox)
+- deletar dino
 
 
 - free json storage (https://www.google.com/search?q=free+json+storage&sxsrf=AJOqlzUtWyYenAKcVbk0igznd4Io3ROI1A%3A1679104353437&ei=YRkVZI-pGpXF5OUP7raEsAw&oq=free+json+s&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAxgBMggIABCABBDLATIICAAQgAQQywEyCAgAEIAEEMsBMggIABCABBDLATIICAAQgAQQywEyCAgAEIAEEMsBMggIABCABBDLATIICAAQgAQQywEyCAgAEIAEEMsBMggIABCABBDLAToKCAAQRxDWBBCwAzoHCAAQsAMQQzoNCAAQ5AIQ1gQQsAMYAToMCC4QyAMQsAMQQxgCOhIILhDHARDRAxDIAxCwAxBDGAI6BAgjECc6CgguEMcBENEDEEM6BAgAEEM6EAguELEDEIMBEMcBENEDEEM6EQguEIAEELEDEIMBEMcBENEDOgoIABCxAxCDARBDOgsIABCABBCxAxCDAToLCC4Q1AIQsQMQgAQ6DgguEIAEELEDEIMBENQCOg4ILhCDARDUAhCxAxCABDoFCAAQgAQ6CwguEIAEEMcBEK8BSgQIQRgAUOo0WMhPYLFhaANwAXgAgAGEAYgBrAqSAQQwLjExmAEAoAEByAETwAEB2gEGCAEQARgJ2gEGCAIQARgI&sclient=gws-wiz-serp)

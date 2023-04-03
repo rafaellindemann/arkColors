@@ -43,7 +43,7 @@ function selecionarDino() {
             atualizarCoresCompletas()
         }
     }
-    
+
 
 
 }
@@ -108,6 +108,11 @@ function criarTabelaDeCores() {
 
 document.getElementById('inpCor').addEventListener('keyup', enterCor)
 document.getElementById('inpReg').addEventListener('keyup', enterReg)
+
+document.getElementById('inpCor2').addEventListener('keyup', enterCor2)
+document.getElementById('inpReg2').addEventListener('keyup', enterReg2)
+document.getElementById('inpQtd').addEventListener('keyup', enterQtd)
+
 document.body.addEventListener('keydown', desfazer)
 document.getElementById('inpCor').focus()
 
@@ -124,12 +129,66 @@ function enterCor(e) {
 
     }
 }
+function enterCor2(e) {
+    if (e.key == 'Enter') {
+        let corLida = Number(document.getElementById('inpCor2').value)
+        if ((corLida >= 0 && corLida <= 100) || (corLida >= 201 && corLida <= 227)) {
+            document.getElementById('inpReg2').focus()
+        } else {
+            alert(corLida + " É um valor de ID incorreto para 'Cor'")
+            document.getElementById('inpCor2').value = ''
+        }
+        let regLida = Number(document.getElementById('inpReg2').value)
+
+    }
+}
 
 function enterReg(e) {
     if (e.key == 'Enter') {
         inserirCor()
 
     }
+}
+function enterReg2(e) {
+    if (e.key == 'Enter') {
+        let regLida2 = Number(document.getElementById('inpReg2').value)
+        if (regLida2 >= 0 && regLida2 <= 5) {
+            document.getElementById('inpQtd').focus()
+        } else {
+            alert("Região inválida")
+        }
+
+    }
+}
+
+function enterQtd(e) {
+    if (e.key == 'Enter') {
+        if(iDinoSelecionado != -1){
+            let inpCor2 = Number(document.getElementById('inpCor2').value)
+            let inpReg2 = Number(document.getElementById('inpReg2').value)
+            let inpQtd = Number(document.getElementById('inpQtd').value)
+            if(inpQtd >= 0 && inpQtd <= 5){
+                dinos[iDinoSelecionado].cores[inpCor2].regioes[inpReg2] = inpQtd
+                atualizarCores()
+                document.getElementById('inpCor2').value = ""
+                document.getElementById('inpReg2').value = ""
+                document.getElementById('inpQtd').value = ""
+                document.getElementById('inpCor2').focus()
+            }else{alert("Quantidade invalida")}
+        }else{alert("Selecione o dino")}
+    }
+}
+
+function novaQtd() {
+    document.getElementById("divAjusteQuantidade").style.display = "block"
+    document.getElementById("sumirQtd").style.display = "block"
+    document.getElementById("novaQtd").style.display = "none"
+}
+
+function sumirQtd() {
+    document.getElementById("divAjusteQuantidade").style.display = "none"
+    document.getElementById("sumirQtd").style.display = "none"
+    document.getElementById("novaQtd").style.display = "block"
 }
 
 function desfazer(e) {
@@ -251,18 +310,28 @@ function inserirCor() {
 }
 
 function exportar() {
-    let dados = JSON.stringify(cores)
-    // document.getElementById('txtDados').innerText = dados
-    document.getElementById('txtDados').value = dados
+    let dados = JSON.stringify(dinos)
     navigator.clipboard.writeText(dados)
     alert("Dados copiados para a área de transferência")
 }
+function salvar() {
+    let erro = false
+    try {
+        dinos = JSON.parse(document.getElementById('txtDados').value)
+    } catch (e) {
+        erro = true
+        alert('Dados invalidos')
+    }
+    if (!erro) {
+        alert("Tabela de cores atualizada")
+        atualizarCores()
+        document.getElementById('txtDados').value = ""
+        document.getElementById('divDadosSalvos').style.display = "none"
+    }
+}
 
 function importar() {
-    cores = JSON.parse(document.getElementById('txtDados').value)
-    alert("Tabela de cores atualizada")
-    atualizarCores()
-    document.getElementById('txtDados').value = ""
+    document.getElementById('divDadosSalvos').style.display = "block"
 }
 
 function fechouTodos(cor) {

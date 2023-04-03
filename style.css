@@ -66,11 +66,48 @@ span{
     background-color: blue;
     width:auto;
 }
+
+#divAjusteQuantidade{
+    display: none;
+}
+
 #txtDados, button{
     background-color: #616161;
     border-radius: 15px;
     overflow: hidden;
 }
+
+#divDadosSalvos{
+    padding-top: -95px;
+    padding-left: 450px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    display: none;
+}
+
+#divSelecionarDino{
+    margin-right: 20px;
+}
+
+#selectDinos{
+    max-width: 100px;
+    max-height: 30px;
+}
+
+#novaQtd{
+    display: block;
+}
+
+#sumirQtd{
+    display: none;
+}
+
+#juntarBotao{
+    display: flex;
+}
+
 input{
     height: 50px;
     width: 60px;
@@ -90,9 +127,7 @@ input[type=number]::-webkit-inner-spin-button {
     height: 65px;
     background: rgb(126, 126, 126);
     width: 65px;
-    /* box-shadow: 10px 0 0 #a7a7a7; */
     text-decoration: none;
-    /* border-left: 10px solid #FFF; */
     overflow-x: hidden;
     overflow-y: hidden;
     transition: 0.5s;
@@ -103,10 +138,6 @@ img{
     margin-top: 4px;
     margin-left: 15px;
 }
-/* #inpAdicionarDinos{
-    height: 30px;
-    width: 60px;
-} */
 
 .navigation:hover{
     width:200px;
@@ -130,44 +161,4 @@ img{
     list-style: none;
     width: 100%;
     margin-top: 5px;
-    /* border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px; */
 }
-
-/* .navigation ul li a{
-    position: relative;
-    display: flex;
-    width: 100%;
-    text-decoration: none;
-    color: #fff;
-} */
-
-/* .navigation ul li a .icon{
-    position: relative;
-    display: block;
-    min-width: 60px;
-    height: 60px;
-    text-align: center;
-    line-height: 70px;
-}
-
-.navigation ul li a .icon ion-icon{
-    position: relative;
-    font-size: 1.5rem;
-    z-index: 1;
-}
-
-.navigation ul li a .title{
-    position: relative;
-    display: block;
-    padding-left: 10px;
-    height: 60px;
-    line-height: 60px;
-    white-space: nowrap;
-} */
-
-/* .navigation ul li.active{
-    background: #a7a7a7 ;
-} */

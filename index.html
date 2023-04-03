@@ -14,7 +14,7 @@
         <img src="images&icons/gears_transparent.gif" alt="">
         <ul>
             <li class="list active">
-                <a href=""><button onclick="importar()">Importar</button></a>
+                <button onclick="importar()">Importar</button>
             </li>
 
             <li class="list">
@@ -27,6 +27,12 @@
             </li>
         </ul>
     </div>
+    <div id="divDadosSalvos">
+        <button onclick="salvar()">Salvar</button>
+        </br>
+        <textarea name="Dados" id="txtDados"></textarea>
+    </div>
+
     <div id="divContainer">
         <div>
             <span>[</span><input type="number" id="inpCor"><span>:</span>
@@ -44,19 +50,23 @@
             <div id="divFechou5" class="divResultado">Fechou 5</div>
             <div id="divFechouTodos" class="divResultado">Fechou todos</div>
         </div>
+        <div id="divAjusteQuantidade" class="divAjusteQuantidade">
+            <span>[</span><input type="number" id="inpCor2"><span>:</span>
+            <input type="number" id="inpReg2"><span>:</span>
+            <input type="number" id="inpQtd"><span>]</span>
+        </div>
 
+        <div id="juntarBotao">
+            <button id="novaQtd" onclick="novaQtd()">Ajustar quantidade</button>
+            <button id="sumirQtd" onclick="sumirQtd()">Ok</button>
+        </div>
     </div>
 
     <div id="divCores"></div>
     <!-- <div>Dino: <input type="text" id="divCriarDino" placeholder="adicione um dino"></div> -->
     <div id="divCoresCompletas">Lista de cores completas: </div>
     <div id="divDados">
-        <!-- <button onclick="importar()">Importar</button> -->
-        <!-- <button onclick="exportar()">Exportar</button> -->
 
-        <div>
-            <textarea name="" id="txtDados" cols="80" rows="20"></textarea>
-        </div>
     </div>
 
     <div id="divTeste"></div>
