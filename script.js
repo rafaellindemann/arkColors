@@ -83,6 +83,7 @@ function atualizarCoresCompletas() {
             for (i = 1; i < dinos[iDinoSelecionado].cores.length; i++) {
                 if (dinos[iDinoSelecionado].cores[i].completa == true) {
                     dinos[iDinoSelecionado].coresCompletas.push(i)
+                    
                 }
             }
         }

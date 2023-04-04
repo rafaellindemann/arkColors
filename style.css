@@ -72,20 +72,30 @@ span{
 }
 
 #txtDados, button{
-    background-color: #616161;
-    border-radius: 15px;
+    background-color: #ffffff;
+    border-radius: 10px;
     overflow: hidden;
+}
+
+#txtDados{
+    width: 600px;
+    height: 150px;
+    font-size: 10px;
 }
 
 #divDadosSalvos{
     padding-top: -95px;
     padding-left: 450px;
+    /* width: 500px;
+    height: 200px; */
     position: relative;
     align-items: center;
     justify-content: center;
-    z-index: 10;
+    z-index: 2;
     display: none;
 }
+
+
 
 #divSelecionarDino{
     margin-right: 20px;
@@ -94,6 +104,8 @@ span{
 #selectDinos{
     max-width: 100px;
     max-height: 30px;
+    border-radius: 10px;
+    background: lightgray;
 }
 
 #novaQtd{
@@ -125,7 +137,7 @@ input[type=number]::-webkit-inner-spin-button {
     font-size: 22px;
     position: absolute;
     height: 65px;
-    background: rgb(126, 126, 126);
+    background: rgb(212, 212, 212);
     width: 65px;
     text-decoration: none;
     overflow-x: hidden;
@@ -136,12 +148,12 @@ input[type=number]::-webkit-inner-spin-button {
 }
 img{
     margin-top: 4px;
-    margin-left: 15px;
+    margin-left: 7px;
 }
 
 .navigation:hover{
-    width:200px;
-    height: 380px;
+    width:130px;
+    height: 180px;
     border-radius: 5%;
 }
 
